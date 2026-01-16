@@ -1,6 +1,8 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://student-marks-management-1p7k.onrender.com';
+const API_BASE_URL =
+  'https://student-marks-management-1p7k.onrender.com/api';
+
 
 const api = axios.create({
   baseURL: API_BASE_URL,
