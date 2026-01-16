@@ -1,0 +1,906 @@
+/* =====================================================
+   STUDENT DASHBOARD STYLES
+   Modern, creative, production-ready
+===================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.student-dashboard {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==================== HEADER NAVIGATION ==================== */
+.student-header-nav {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+  color: white;
+  padding: 16px 20px;
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.student-header-nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.student-nav-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  gap: 20px;
+}
+
+.student-nav-left {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.student-nav-icon {
+  font-size: 2.5rem;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.student-nav-text h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.student-nav-text p {
+  margin: 4px 0 0 0;
+  font-size: 0.85rem;
+  opacity: 0.9;
+}
+
+.student-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.student-nav-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-right: 2px solid rgba(255, 255, 255, 0.3);
+  padding-right: 20px;
+}
+
+.student-nav-avatar {
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.student-nav-info {
+  display: none;
+}
+
+.student-nav-email {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.student-nav-role {
+  margin: 2px 0 0 0;
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+.student-logout-btn {
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.student-logout-btn:hover {
+  background: rgba(255, 59, 48, 0.8);
+  border-color: #ff3b30;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 59, 48, 0.4);
+}
+
+.student-logout-btn:active {
+  transform: translateY(0);
+}
+
+/* ==================== BACKGROUND DECORATIONS ==================== */
+.bg-decoration {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.bg-1 {
+  width: 400px;
+  height: 400px;
+  background: #4f46e5;
+  top: -100px;
+  right: -100px;
+  animation: float 6s ease-in-out infinite;
+}
+
+.bg-2 {
+  width: 300px;
+  height: 300px;
+  background: #3b82f6;
+  bottom: -50px;
+  left: -50px;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+}
+
+/* ==================== CONTAINER & LAYOUT ==================== */
+.student-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ==================== HEADER ==================== */
+.student-header {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.student-header h1 {
+  font-size: 2.5rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.student-header p {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 400;
+}
+
+/* ==================== SEARCH SECTION ==================== */
+.search-section {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 40px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: slideUp 0.6s ease;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.search-form {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 250px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  background-color: white;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.1);
+  background-color: #f8f6ff;
+}
+
+.input-hint {
+  display: block;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  margin-top: 6px;
+  font-style: italic;
+}
+
+.btn-search {
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.btn-search:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-search:active {
+  transform: translateY(0);
+}
+
+.error-message {
+  margin-top: 15px;
+  padding: 12px 16px;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.error-icon {
+  font-size: 1.2rem;
+}
+
+/* ==================== EMPTY STATE ==================== */
+.empty-state {
+  text-align: center;
+  padding: 60px 40px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+.empty-state p {
+  font-size: 1.1rem;
+  color: #6b7280;
+}
+
+/* ==================== RESULTS SECTION ==================== */
+.results-section {
+  animation: slideUp 0.6s ease;
+}
+
+/* ==================== STUDENT INFO CARD ==================== */
+.student-info-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  margin-bottom: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 4px solid #4f46e5;
+}
+
+.info-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.student-avatar {
+  font-size: 3.5rem;
+  min-width: 80px;
+  text-align: center;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.student-details {
+  flex: 1;
+}
+
+.student-name {
+  margin: 0;
+  font-size: 1.8rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.student-meta {
+  margin: 10px 0 0 0;
+  font-size: 0.95rem;
+  color: #6b7280;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  display: inline;
+}
+
+.meta-divider {
+  opacity: 0.5;
+}
+
+/* ==================== MARKS GRID ==================== */
+.marks-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.marks-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 0.3s ease;
+  animation: scaleIn 0.5s ease;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.marks-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.subject-icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.subject-name {
+  margin: 0 0 16px 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.marks-display {
+  margin-bottom: 12px;
+}
+
+.marks-number {
+  margin: 0;
+  font-size: 2.2rem;
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.marks-max {
+  margin: 4px 0 0 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.marks-grade {
+  margin-bottom: 12px;
+}
+
+.grade-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.grade-A+ {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.grade-A {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.grade-B+ {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.grade-B {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.grade-C {
+  background-color: #fed7aa;
+  color: #9a3412;
+}
+
+.grade-D {
+  background-color: #fecaca;
+  color: #991b1b;
+}
+
+.marks-progress {
+  width: 100%;
+  height: 4px;
+  background-color: #e5e7eb;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 0.6s ease;
+}
+
+/* ==================== SUMMARY SECTION ==================== */
+.summary-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Summary Card */
+.summary-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  gap: 20px;
+  animation: slideUp 0.6s ease 0.1s both;
+}
+
+.summary-item {
+  flex: 1;
+  text-align: center;
+}
+
+.summary-label {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #6b7280;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.summary-value {
+  margin: 10px 0 6px 0;
+  font-size: 2.2rem;
+  color: #4f46e5;
+  font-weight: 700;
+}
+
+.summary-max {
+  margin: 0;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}
+
+.summary-grade {
+  margin: 10px 0 0 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.summary-divider {
+  width: 1px;
+  background-color: #e5e7eb;
+}
+
+/* Performance Chart */
+.performance-chart {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  animation: slideUp 0.6s ease 0.2s both;
+}
+
+.performance-chart h3 {
+  margin: 0 0 24px 0;
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.chart-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.chart-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.chart-label {
+  min-width: 50px;
+  font-weight: 600;
+  color: #4f46e5;
+  font-size: 0.85rem;
+}
+
+.chart-bar-container {
+  flex: 1;
+  height: 28px;
+  background-color: #f3f4f6;
+  border-radius: 6px;
+  overflow: hidden;
+  position: relative;
+}
+
+.chart-bar {
+  height: 100%;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  transition: width 0.6s ease;
+  min-width: 35px;
+}
+
+.chart-value {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+/* ==================== ACTION BUTTON ==================== */
+.btn-reset {
+  display: block;
+  margin: 40px auto 0;
+  padding: 12px 28px;
+  background: linear-gradient(135deg, #4f46e5 0%, #3b82f6 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(79, 70, 229, 0.3);
+}
+
+.btn-reset:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(79, 70, 229, 0.4);
+}
+
+.btn-reset:active {
+  transform: translateY(0);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 768px) {
+  .student-container {
+    padding: 30px 15px;
+  }
+
+  .student-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .search-section {
+    padding: 30px 20px;
+  }
+
+  .search-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .form-group {
+    min-width: unset;
+    flex: 1;
+    width: 100%;
+  }
+
+  .btn-search {
+    width: 100%;
+  }
+
+  .marks-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+
+  .marks-card {
+    padding: 18px;
+  }
+
+  .marks-number {
+    font-size: 1.8rem;
+  }
+
+  .summary-section {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-card {
+    flex-direction: column;
+  }
+
+  .summary-divider {
+    display: none;
+  }
+
+  .info-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .student-meta {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .student-container {
+    padding: 20px 12px;
+  }
+
+  .student-header h1 {
+    font-size: 1.4rem;
+  }
+
+  .student-header p {
+    font-size: 0.9rem;
+  }
+
+  .search-section {
+    padding: 20px 15px;
+  }
+
+  .search-input {
+    padding: 10px 12px;
+    font-size: 0.95rem;
+  }
+
+  .marks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  .marks-card {
+    padding: 14px;
+  }
+
+  .subject-icon {
+    font-size: 2rem;
+  }
+
+  .marks-number {
+    font-size: 1.5rem;
+  }
+
+  .student-name {
+    font-size: 1.3rem;
+  }
+
+  .performance-chart {
+    padding: 20px;
+  }
+
+  .chart-bars {
+    gap: 12px;
+  }
+
+  .chart-item {
+    flex-wrap: wrap;
+  }
+
+  .chart-bar-container {
+    height: 24px;
+  }
+
+  .chart-value {
+    font-size: 0.7rem;
+  }
+
+  .student-info-card {
+    padding: 20px;
+  }
+
+  .summary-card {
+    padding: 20px;
+  }
+
+  /* Header Navigation Mobile Responsive */
+  .student-header-nav {
+    padding: 12px 15px;
+  }
+
+  .student-nav-container {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .student-nav-left {
+    width: 100%;
+    gap: 10px;
+  }
+
+  .student-nav-icon {
+    font-size: 2rem;
+  }
+
+  .student-nav-text h2 {
+    font-size: 1.2rem;
+  }
+
+  .student-nav-text p {
+    font-size: 0.75rem;
+  }
+
+  .student-nav-right {
+    width: 100%;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .student-nav-user {
+    gap: 8px;
+    padding-right: 10px;
+    border-right: none;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 10px;
+    flex: 1;
+  }
+
+  .student-nav-info {
+    display: block;
+  }
+
+  .student-nav-avatar {
+    width: 35px;
+    height: 35px;
+    font-size: 0.9rem;
+  }
+
+  .student-logout-btn {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+    flex: 0 1 auto;
+  }
+}
